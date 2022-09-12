@@ -1,0 +1,187 @@
+// general
+
+:root {
+  --orange: #FC8410;
+  --green: #106853;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+section, footer {
+  padding: 50px 100px;
+}
+
+button {
+  cursor: pointer
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active {
+  outline: 0
+}
+
+// header 
+
+header {
+  background-color: var(--orange);
+  width: 100%;
+  padding-top: 20px;
+  padding-inline: 0;
+  position: relative;
+  
+  > div {
+    width: 100%;
+    padding-block: 15px;
+    padding-inline: 100px;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 0;
+
+    button {
+      padding: 10px 12px;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      border: 2px solid white;
+      transition: .4s;
+    }
+    #loginBtn {
+      background-color: transparent;
+      color: white
+    }
+    #registerBtn {
+      background-color: white;
+      color: black;
+    }
+  }
+
+  .header-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-cartIcons {
+      display: flex;
+      gap: 20px;
+
+      button {
+        background-color: transparent;
+        border: 0;
+        position: relative;
+
+        span {
+          background-color: red;
+          padding: 3px;
+          width: 25px;
+          height: 25px;
+          // aspect-ratio: 1/1;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          color: white;
+          top: -70%;
+          right: 0;
+          transform: translate(50%, 50%);
+          position: absolute
+        }
+      }
+    }
+
+    .header-searchbar {
+      display: grid;
+      grid-template-columns: 9fr 1fr;
+      border: 2px solid white;
+      width: 60%;
+      height: 55px;
+      padding: 0 30px;
+      position: relative;
+      border-radius: 5px;
+
+      input {
+        border: 0;
+        height: 100%;
+        background-color: transparent;
+        font-size: 1.2rem;
+        color: white
+      }
+      ::placeholder {
+        color: white;
+      }
+      button {
+        height: 100%;
+        border: 0;
+        position: absolute;
+        right: 10px;
+        background-color: transparent;
+        font-size: 1.4rem;
+        color: white
+      }
+    }
+  }
+  .header-bottom {
+    display: flex;
+    padding-block: 0px;
+    padding-left: 0;
+    height: 60px;
+    gap: 20px;
+
+    .categories {
+      background-color: var(--green);
+      padding-left: 100px;
+      color: white;
+      width: 400px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      
+    }
+    .header-nav {
+      display: flex;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        
+        li {
+          font-size: 1.2rem;
+
+          a {
+            color: white
+          }
+        }
+      }
+    }
+  }
+
+  .pattern-image {
+    padding: 0;
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      pointer-events: none
+    }
+  }
+}

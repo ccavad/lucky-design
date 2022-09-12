@@ -1,0 +1,173 @@
+:root {
+  --orange: #FC8410;
+  --green: #106853;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+section, footer {
+  padding: 50px 100px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active {
+  outline: 0;
+}
+
+header {
+  background-color: var(--orange);
+  width: 100%;
+  padding-top: 20px;
+  padding-inline: 0;
+  position: relative;
+}
+header > div {
+  width: 100%;
+  padding-block: 15px;
+  padding-inline: 100px;
+}
+header .header-top {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 0;
+}
+header .header-top button {
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  transition: 0.4s;
+}
+header .header-top #loginBtn {
+  background-color: transparent;
+  color: white;
+}
+header .header-top #registerBtn {
+  background-color: white;
+  color: black;
+}
+header .header-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-middle .header-cartIcons {
+  display: flex;
+  gap: 20px;
+}
+header .header-middle .header-cartIcons button {
+  background-color: transparent;
+  border: 0;
+  position: relative;
+}
+header .header-middle .header-cartIcons button span {
+  background-color: red;
+  padding: 3px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  top: -70%;
+  right: 0;
+  transform: translate(50%, 50%);
+  position: absolute;
+}
+header .header-middle .header-searchbar {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  border: 2px solid white;
+  width: 60%;
+  height: 55px;
+  padding: 0 30px;
+  position: relative;
+  border-radius: 5px;
+}
+header .header-middle .header-searchbar input {
+  border: 0;
+  height: 100%;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: white;
+}
+header .header-middle .header-searchbar ::-moz-placeholder {
+  color: white;
+}
+header .header-middle .header-searchbar :-ms-input-placeholder {
+  color: white;
+}
+header .header-middle .header-searchbar ::placeholder {
+  color: white;
+}
+header .header-middle .header-searchbar button {
+  height: 100%;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: white;
+}
+header .header-bottom {
+  display: flex;
+  padding-block: 0px;
+  padding-left: 0;
+  height: 60px;
+  gap: 20px;
+}
+header .header-bottom .categories {
+  background-color: var(--green);
+  padding-left: 100px;
+  color: white;
+  width: 400px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .header-bottom .header-nav {
+  display: flex;
+}
+header .header-bottom .header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .header-bottom .header-nav ul li {
+  font-size: 1.2rem;
+}
+header .header-bottom .header-nav ul li a {
+  color: white;
+}
+header .pattern-image {
+  padding: 0;
+}
+header .pattern-image img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+}/*# sourceMappingURL=style.css.map */
