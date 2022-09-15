@@ -188,6 +188,7 @@ header .header-bottom .categories {
   align-items: center;
   gap: 15px;
   cursor: pointer;
+  z-index: 2;
 }
 header .header-bottom .header-nav {
   display: flex;
@@ -203,6 +204,7 @@ header .header-bottom .header-nav ul li {
 header .header-bottom .header-nav ul li a {
   color: white;
   padding-bottom: 0.4rem;
+  position: relative;
 }
 header .header-bottom .header-nav ul li a::after {
   content: "";
@@ -211,6 +213,8 @@ header .header-bottom .header-nav ul li a::after {
   background-color: white;
   display: block;
   transition: 0.2s;
+  position: absolute;
+  top: 2rem;
 }
 header .header-bottom .header-nav ul li a:hover::after {
   width: 100%;
@@ -588,6 +592,7 @@ footer .footer-top .footer-menus .footer-nav li a {
   color: black;
   display: inline-block;
   padding-bottom: 0.4rem;
+  position: relative;
 }
 footer .footer-top .footer-menus .footer-nav li a::after {
   content: "";
@@ -596,6 +601,8 @@ footer .footer-top .footer-menus .footer-nav li a::after {
   background-color: var(--orange);
   display: block;
   transition: 0.2s;
+  position: absolute;
+  top: 1.3rem;
 }
 footer .footer-top .footer-menus .footer-nav li a:hover::after {
   width: 100%;
@@ -612,6 +619,18 @@ footer .footer-bottom a {
   font-size: 1.2rem;
 }
 
+@media (max-width: 768px) {
+  header > div {
+    padding-inline: 3rem;
+  }
+  .header-searchbar,
+.header-nav {
+    display: none !important;
+  }
+  .header-hamburger {
+    display: block;
+  }
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -652,7 +671,7 @@ span.swiper-pagination-bullet {
   position: fixed;
   bottom: 5%;
   right: 5%;
-  background-color: #FFBF00;
+  background-color: var(--orange);
   color: white;
   padding: 15px;
   cursor: pointer;
@@ -661,4 +680,5 @@ span.swiper-pagination-bullet {
   font-size: 1.2rem;
   display: none;
   border-radius: 4px;
+  outline: 1px solid white;
 }/*# sourceMappingURL=style.css.map */

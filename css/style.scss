@@ -5,6 +5,8 @@
   --green: #106853;
 }
 
+$section-padding: 3rem 6rem;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -198,6 +200,7 @@ header {
       align-items: center;
       gap: 15px;
       cursor: pointer;
+      z-index: 2;
     }
     .header-nav {
       display: flex;
@@ -213,6 +216,7 @@ header {
           a {
             color: white;
             padding-bottom: .4rem;
+            position: relative;
 
             &::after {
               content: "";
@@ -221,6 +225,8 @@ header {
               background-color: white;
               display: block;
               transition: .2s;
+              position: absolute;
+              top: 2rem;
             }
 
             &:hover {
@@ -246,7 +252,7 @@ header {
 // banner-slider
 
 .banner-slider {
-  padding: 3rem 6rem
+  padding: $section-padding;
 }
 
 // product
@@ -360,7 +366,7 @@ header {
 
 .category1 {
   background-color: var(--orange);
-  padding: 3rem 6rem;
+  padding: $section-padding;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -501,7 +507,7 @@ header {
 
 .category2 {
   background-color: #106853;
-  padding: 3rem 6rem;
+  padding: $section-padding;
   position: relative;
 
   .pattern-image img {
@@ -605,7 +611,7 @@ header {
 // brand slider 
 
 .partners-slider {
-  padding: 3rem 6rem;
+  padding: $section-padding;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -681,6 +687,7 @@ footer {
             color: black;
             display: inline-block;
             padding-bottom: .4rem;
+            position: relative;
 
             &::after {
               content: "";
@@ -689,6 +696,8 @@ footer {
               background-color: var(--orange);
               display: block;
               transition: .2s;
+              position: absolute;
+              top: 1.3rem
             }
 
             &:hover {
@@ -712,6 +721,23 @@ footer {
       color: var(--orange);
       font-size: 1.2rem;
     }
+  }
+}
+
+// media queries
+
+@media (max-width: 768px) {
+  $section-padding: 3rem;
+
+  header > div {
+    padding-inline: 3rem;
+  }
+  .header-searchbar,
+  .header-nav {
+    display: none !important
+  }
+  .header-hamburger {
+    display: block
   }
 }
 
@@ -768,7 +794,7 @@ span.swiper-pagination-bullet {
   position: fixed;
   bottom: 5%;
   right: 5%;
-  background-color: #FFBF00;
+  background-color: var(--orange);
   color: white;
   padding: 15px;
   cursor: pointer;
@@ -777,4 +803,5 @@ span.swiper-pagination-bullet {
   font-size: 1.2rem;
   display: none;
   border-radius: 4px;
+  outline: 1px solid white;
 }
