@@ -887,6 +887,23 @@ footer {
   }
 }
 
+// office supplies page 
+
+.off-sup-main {
+  padding: $section-padding;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .section-title {
+    margin-bottom: 3rem;
+    &::after {
+      background-color: var(--green);
+    }
+  }
+}
+
+
 // swiper 
 
 .swiper {
