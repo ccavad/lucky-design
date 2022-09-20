@@ -746,7 +746,7 @@ footer {
 // media queries
 
 @media (max-width: 768px) {
-  $section-padding: 3rem;
+  $section-padding: 3rem !important;
 
   header {
     > div {
@@ -816,6 +816,8 @@ footer {
   // supplies page 
 
   .supplies-main {
+    padding: 3rem !important;
+
     .mobile-filter-btn {
       display: block !important;
     }
@@ -826,7 +828,10 @@ footer {
       }
       .grid-right {
         .grid-sort {
-          grid-template-columns: 1fr;
+          flex-direction: column;
+        }
+        .grid-products {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
         }
       }
     }
@@ -834,7 +839,7 @@ footer {
 }
 
 @media (max-width: 1200px) {
-  $section-padding: 3rem 5rem;
+  $section-padding: 3rem 5rem !important;
 
   header {
     .header-bottom {
@@ -998,16 +1003,21 @@ footer {
       gap: 2rem;
 
       .grid-sort {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         padding: 1rem;
+        gap: 1rem;
 
         label {
           font-size: 17px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: .5rem;
 
           select {
             border: 1px solid green;
-            min-width: 180px;
+            width: 90%;
             border-radius: 5px;
             padding: 0.5rem;
             font-weight: 500;
@@ -1018,6 +1028,7 @@ footer {
       .grid-products {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
         gap: 1.6rem;
       }
     }
