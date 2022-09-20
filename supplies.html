@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/logo/logo-header.svg" type="image/x-icon">
+    <!-- font-awesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Lucky Office Support - Ofis Ləvazamitları</title>
+  </head>
+  <body>
+    <header>
+      <div class="pattern-image">
+        <img src="assets/images/pattern/leaf-header-1.png" alt="flower pattern">
+      </div>
+      <div class="header-top">
+        <button id="loginBtn">Daxil ol</button>
+        <button id="registerBtn">Qeydiyyat</button>
+      </div>
+      <div class="header-middle">
+        <a class="header-logo" href="index.html">
+          <img src="assets/images/logo/logo-header.svg" alt="logo" />
+        </a>
+        <div class="header-hamburger">
+          <button>
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <div class="header-searchbar">
+          <input type="text" placeholder="Axtar" />
+          <button>
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="header-cartIcons">
+          <a href="#" id="cartBtn">
+            <img src="assets/images/general/cart.svg" alt="cart icon" />
+            <span id="cartBtnCount">0</span>
+          </a>
+          <a href="#" id="wishlistBtn">
+            <img src="assets/images/general/heart.svg" alt="heart icon" />
+            <span id="wishlistBtnCount">0</span>
+          </a>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="categories">
+          <img src="assets/images/icon/category.svg" alt="category icon" />
+          Kateqoriyalar
+        </div>
+        <div class="header-nav">
+          <ul>
+            <li><a href="#">Haqqımızda</a></li>
+            <li><a href="#">Yeni</a></li>
+            <li><a href="#">Endirimlər</a></li>
+            <li><a href="#">Ən çox satılanlar</a></li>
+            <li><a href="#">Şərtlər</a></li>
+            <li>
+              <a href="#"
+                >Əlaqə
+                <img src="assets/images/icon/arrow-right.svg" alt="" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="supplies-main">
+      <h2 class="section-title">
+        Ofis ləvazimatları
+      </h2>
+
+      <button class="mobile-filter-btn">
+        <i class="fa-solid fa-filter"></i> Filtrlə
+      </button>
+
+      <div class="supplies-main-grid">
+
+        <div class="grid-left">
+          <div class="price-filter">
+            <h3 class="subheader-title">Qiymət filteri</h3>
+            <div class="price-input">
+              <div class="field">
+                <input type="number" class="input-min" value="0">
+                <img src="assets/images/icon/manat.svg" alt="manat">
+              </div>
+              <div class="separator">-</div>
+              <div class="field">
+                <input type="number" class="input-max" value="500">
+                <img src="assets/images/icon/manat.svg" alt="manat">
+              </div>
+            </div>
+            <div class="range-input">
+              <input type="range" class="range-min" min="0" max="1790" value="0" step="1">
+              <input type="range" class="range-max" min="0" max="1790" value="500" step="1">
+            </div>
+            <div class="slider">
+              <div class="progress"></div>
+            </div>
+          </div>
+          <hr>
+          <div class="subcategory-filter">
+            <h3 class="subheader-title">Alt kateqoriya</h3>
+            <div class="subcategories">
+              <label>
+                <input type="checkbox" data-category="agardici">
+                Ağardıcı
+              </label>
+              <label>
+                <input type="checkbox" data-category="bicag">
+                Bıçaq
+              </label>
+              <label>
+                <input type="checkbox" data-category="bloknot">
+                Bloknot
+              </label>
+              <label>
+                <input type="checkbox" data-category="cekveqaime">
+                Çek və qaimə
+              </label>
+              <label>
+                <input type="checkbox" data-category="cercive">
+                Çərçivə
+              </label>
+              <label>
+                <input type="checkbox" data-category="delgec">
+                Delgəc
+              </label>
+              <label>
+                <input type="checkbox" data-category="defter">
+                Dəftər
+              </label>
+              <label>
+                <input type="checkbox" data-category="fayl">
+                Fayl
+              </label>
+              <label>
+                <input type="checkbox" data-category="kagiz">
+                Kağız
+              </label>
+              <label>
+                <input type="checkbox" data-category="kalkulyator">
+                Kalkulyator
+              </label>
+              <label>
+                <input type="checkbox" data-category="karandas">
+                Karandaş
+              </label>
+              <label>
+                <input type="checkbox" data-category="karandasyonan">
+                Karandaş yonan
+              </label>
+              <label>
+                <input type="checkbox" data-category="marker">
+                Marker
+              </label>
+              <label>
+                <input type="checkbox" data-category="masaustudestleri">
+                Masaüstü dəstləri
+              </label>
+              <label>
+                <input type="checkbox" data-category="pozan">
+                Pozan
+              </label>
+              <label>
+                <input type="checkbox" data-category="pulrezini">
+                Pul rezini
+              </label>
+            </div>
+          </div>
+          <hr>
+          <div class="filter-submit">
+            <label>
+              <input type="checkbox" data-category="yeni">
+              Yeni
+            </label>
+            <label>
+              <input type="checkbox" data-category="tovsiyye">
+              Tövsiyyə edilir
+            </label>
+
+            <button class="filter-submit-btn">Filtrlə</button>
+          </div>
+        </div>
+
+        <div class="grid-right">
+          <div class="grid-sort">
+            <label>
+              Saya görə:
+              <select name="countsort">
+                <option value="12" selected>12</option>
+                <option value="18">18</option>
+                <option value="24">24</option>
+                <option value="30">30</option>
+              </select>
+            </label>
+            <label>
+              Qiymətə görə:
+              <select name="pricesort">
+                <option value="choose" selected disabled>Seç</option>
+                <option value="chptoexp">Ucuzdan Bahaya</option>
+                <option value="exptochp">Bahadan Ucuza</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="grid-products">
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+            <!-- product  -->
+            <div class="product">
+              <img src="assets/Products/1636102439dwGqfsr0N4IbHr9RYvefNoUJB5mWNiAQdKCE1aPo.png" class="product-image">
+              <h3 class="product-title">Qələm "Gigis" 9684</h3>
+              <h4 class="product-price">0.40 Azn</h4>
+              <button class="addToCartBtn">Səbətə at</button>
+              <span class="product-badge">Tövsiyə edilir</span>
+              <div class="product-wished">
+                <img src="assets/images/icon/heart-outline.svg" alt="heart icon">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </main>
+
+    <button class="scrollTopBtn">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <footer>
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="assets/images/logo/logo-footer.png" alt="logo">
+          <div class="footer-social-links">
+            <a href="https://facebook.com">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-menus">
+          <ul class="footer-nav">
+            <li class="footer-menu-title">Kateqoriyalar</li>
+            <li><a href="./supplies.html">Ofis ləvazimatları</a></li>
+            <li><a href="#">Qida və içkilər</a></li>
+            <li><a href="#">Təsərrüfat malları</a></li>
+            <li><a href="#">Elektron avadanlıq</a></li>
+            <li><a href="#">Dibçək gülləri</a></li>
+            <li><a href="#">Hədiyyəlik</a></li>
+            <li><a href="#">Coffee shop</a></li>
+          </ul>
+          <ul class="footer-nav">
+            <li class="footer-menu-title">Menyular</li>
+            <li><a href="#">Haqqımızda</a></li>
+            <li><a href="#">Çatdırılma</a></li>
+            <li><a href="#">Geri qaytarılma və dəyişdirmə</a></li>
+            <li><a href="#">Əlaqə</a></li>
+          </ul>
+          <ul class="footer-nav">
+            <li class="footer-menu-title">Əlaqə</li>
+            <li>Tel: (994) 99 832 07 77</li>
+            <li>E-mail: info@los.az</li>
+            <li>Ünvan: Ziya Bünyadov pr, 1965. Çinar Park Biznes Mərkəzi</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Bütün huquqlar qorunur - <a href="https://los.az/az">Lucky Office Support</a></p>
+        <p>Powered by <a href="https://proton.az">Proton.az</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- GetButton.io widget -->
+    <script type="text/javascript">
+      (function () {
+          var options = {
+              email: "info@los.az", // Email
+              whatsapp: "(994) 99 832 07 77", // WhatsApp number
+              call_to_action: "Mesaj göndər", // Call to action
+              button_color: "#FF6550", // Color of button
+              position: "left", // Position may be 'right' or 'left'
+              order: "email,whatsapp", // Order of buttons
+          };
+          var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+          var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+          s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+      })();
+    </script>
+    <!-- /GetButton.io widget -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

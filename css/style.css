@@ -697,6 +697,15 @@ header .header-nav {
     grid-column: 1/2;
     grid-row: 4/5;
   }
+  .supplies-main .mobile-filter-btn {
+    display: block !important;
+  }
+  .supplies-main .supplies-main-grid .grid-left {
+    display: none !important;
+  }
+  .supplies-main .supplies-main-grid .grid-right .grid-sort {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 1200px) {
   header .header-bottom {
@@ -752,17 +761,227 @@ header .header-nav {
     margin: 1rem;
   }
 }
-.off-sup-main {
+.supplies-main {
   padding: 3rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f8f8f8;
 }
-.off-sup-main .section-title {
+.supplies-main .mobile-filter-btn {
+  width: 100%;
+  background-color: var(--orange);
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 0;
+  transition: 0.4s;
+  display: none;
+  margin: 1rem;
+}
+.supplies-main .mobile-filter-btn:hover {
+  background-color: var(--green);
+}
+.supplies-main .supplies-main-grid {
+  display: flex;
+  gap: 2rem;
+}
+.supplies-main .supplies-main-grid .grid-left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+.supplies-main .supplies-main-grid .grid-left hr {
+  opacity: 0.25;
+  margin: 1rem 5px;
+}
+.supplies-main .supplies-main-grid .grid-left .subcategories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 450px;
+  overflow-y: scroll;
+  margin-top: 2rem;
+  padding: 1.2rem;
+}
+.supplies-main .supplies-main-grid .grid-left .subcategories::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+}
+.supplies-main .supplies-main-grid .grid-left .filter-submit {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.supplies-main .supplies-main-grid .grid-left .filter-submit .filter-submit-btn {
+  width: 160px;
+  background-color: var(--green);
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 0;
+  transition: 0.4s;
+}
+.supplies-main .supplies-main-grid .grid-left .filter-submit .filter-submit-btn:hover {
+  background-color: var(--orange);
+}
+.supplies-main .supplies-main-grid .grid-left,
+.supplies-main .supplies-main-grid .grid-sort {
+  background-color: white;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+}
+.supplies-main .supplies-main-grid .grid-right {
+  flex: 2.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-sort {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-sort label {
+  font-size: 17px;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-sort label select {
+  border: 1px solid green;
+  min-width: 180px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-weight: 500;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.supplies-main .section-title {
   margin-bottom: 3rem;
 }
-.off-sup-main .section-title::after {
+.supplies-main .section-title::after {
   background-color: var(--green);
+}
+
+.subheader-title {
+  position: relative;
+  font-weight: 500;
+  margin: 1rem;
+}
+.subheader-title::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: var(--green);
+  left: 0;
+  bottom: -10px;
+}
+
+.price-filter {
+  max-width: 350px;
+  background: #fff;
+}
+
+.price-input {
+  width: 100%;
+  display: flex;
+  margin: 30px 0 35px;
+}
+
+.price-input .field {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  align-items: center;
+}
+
+.field input {
+  width: 100%;
+  height: 24px;
+  outline: none;
+  font-size: 19px;
+  margin-left: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border: 0;
+  background-color: #d0d0d0;
+  -moz-appearance: textfield;
+}
+
+.field img {
+  margin-left: 1rem;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.price-input .separator {
+  width: 130px;
+  display: flex;
+  font-size: 19px;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  height: 5px;
+  position: relative;
+  background: var(--orange);
+  border-radius: 5px;
+}
+
+.slider .progress {
+  height: 100%;
+  left: 25%;
+  right: 25%;
+  position: absolute;
+  border-radius: 5px;
+  background: var(--orange);
+}
+
+.range-input {
+  position: relative;
+}
+
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  z-index: 9;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background: var(--orange);
+  pointer-events: auto;
+  -webkit-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border: none;
+  border-radius: 50%;
+  background: var(--orange);
+  pointer-events: auto;
+  -moz-appearance: none;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
 .swiper {
@@ -804,7 +1023,7 @@ span.swiper-pagination-bullet {
 .scrollTopBtn {
   position: fixed;
   bottom: 5%;
-  right: 5%;
+  right: 2%;
   background-color: var(--orange);
   color: white;
   padding: 15px;
@@ -816,4 +1035,36 @@ span.swiper-pagination-bullet {
   border-radius: 4px;
   outline: 1px solid white;
   z-index: 3;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 60px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F3F3;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }/*# sourceMappingURL=style.css.map */
