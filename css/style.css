@@ -635,6 +635,11 @@ footer .footer-bottom a {
   font-size: 1.2rem;
 }
 
+@media (min-width: 769px) {
+  .grid-left {
+    display: flex !important;
+  }
+}
 @media (max-width: 768px) {
   header > div {
     padding-inline: 3rem;
@@ -697,20 +702,34 @@ header .header-nav {
     grid-column: 1/2;
     grid-row: 4/5;
   }
-  .supplies-main {
+  .supplies-page-body .supplies-main {
     padding: 3rem !important;
   }
-  .supplies-main .mobile-filter-btn {
+  .supplies-page-body .supplies-main .mobile-filter-btn {
     display: block !important;
   }
-  .supplies-main .supplies-main-grid .grid-left {
-    display: none !important;
-  }
-  .supplies-main .supplies-main-grid .grid-right .grid-sort {
+  .supplies-page-body .supplies-main .supplies-main-grid {
     flex-direction: column;
   }
-  .supplies-main .supplies-main-grid .grid-right .grid-products {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+  .supplies-page-body .supplies-main .supplies-main-grid .grid-left {
+    display: none;
+  }
+  .supplies-page-body .supplies-main .supplies-main-grid .grid-right .grid-sort {
+    flex-direction: column;
+  }
+  .supplies-page-body .supplies-main .supplies-main-grid .grid-right .grid-products {
+    grid-template-columns: 1fr !important;
+  }
+  .supplies-page-body .supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination {
+    grid-column: auto;
+  }
+  .about-info {
+    flex-direction: column;
+    gap: 5rem !important;
+    padding-bottom: 6rem;
+  }
+  .about-info .about-info-logo img {
+    scale: 1.5;
   }
 }
 @media (max-width: 1200px) {
@@ -799,6 +818,7 @@ header .header-nav {
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  transition: 0.4s;
 }
 .supplies-main .supplies-main-grid .grid-left hr {
   opacity: 0.25;
@@ -870,6 +890,44 @@ header .header-nav {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 1.6rem;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination li {
+  transition: 0.8s;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination li.disabled a {
+  cursor: default;
+  border: 1px solid gray;
+  font-size: 0.6rem;
+  color: gray;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination li.disabled:hover a {
+  background-color: white;
+  border: 1px solid gray;
+  color: gray;
+}
+.supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination li.active a, .supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination li:hover a {
+  background-color: var(--orange);
+  color: white;
+  border: 1px solid var(--orange);
+}
+.supplies-main .supplies-main-grid .grid-right .grid-products .grid-pagination a {
+  background: transparent;
+  padding: 5px;
+  color: var(--green);
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  width: 25px;
+  display: grid;
+  height: 25px;
+  place-content: center;
+  cursor: pointer;
 }
 .supplies-main .section-title {
   margin-bottom: 3rem;
@@ -994,6 +1052,63 @@ input[type=range]::-moz-range-thumb {
   pointer-events: auto;
   -moz-appearance: none;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.about-page-body .about-main {
+  padding: 3rem 6rem;
+}
+.about-page-body .about-main .about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.about-page-body .about-main .about-section > img {
+  position: absolute;
+}
+.about-page-body .about-main .about-section .section-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.about-page-body .about-main .about-section .section-title::after {
+  background-color: var(--green);
+  top: 2.5rem;
+}
+.about-page-body .about-main .about-section .breadcrumb {
+  margin-top: 2.5rem;
+}
+.about-page-body .about-main .about-section .about-info {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.about-page-body .about-main .about-section .about-info > div {
+  flex: 1;
+}
+.about-page-body .about-main .about-section .about-info .about-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+.about-page-body .about-main .about-section .about-info .about-info-text h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.about-page-body .about-main .about-section .about-info .about-info-text p span {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.about-page-body .about-main .about-section .about-info .about-info-text ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+.about-page-body .about-main .about-section .about-info .about-info-logo {
+  display: grid;
+  place-items: center;
 }
 
 .swiper {

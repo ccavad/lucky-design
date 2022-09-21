@@ -2,10 +2,24 @@
 
 const scrollTopBtn = document.querySelector(".scrollTopBtn");
 const products = document.querySelectorAll(".product");
+const mobileFilterBtn = document.querySelector(".mobile-filter-btn");
+const suppliesGridLeft = document.querySelector(".supplies-main-grid .grid-left");
 
 // variables 
 
 let cartData = [];
+
+// events 
+
+mobileFilterBtn.addEventListener("click", () => {
+  if (suppliesGridLeft.style.display === "none") {
+    suppliesGridLeft.style.display = "flex"
+  } else {
+    suppliesGridLeft.style.display = "none"
+  }
+})
+
+
 
 // cart functionality 
 
