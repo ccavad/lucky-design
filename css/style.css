@@ -180,6 +180,57 @@ header .header-middle .header-searchbar button {
   font-size: 1.4rem;
   color: white;
 }
+header .header-mobile-nav {
+  border-top: 1px solid white;
+  padding-block: 1.5rem;
+  display: none;
+}
+header .header-mobile-nav .header-searchbar {
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  border: 2px solid white;
+  width: 100%;
+  padding: 10px 30px;
+  position: relative;
+  border-radius: 5px;
+}
+header .header-mobile-nav .header-searchbar input {
+  border: 0;
+  height: 100%;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: white;
+}
+header .header-mobile-nav .header-searchbar ::-moz-placeholder {
+  color: white;
+}
+header .header-mobile-nav .header-searchbar :-ms-input-placeholder {
+  color: white;
+}
+header .header-mobile-nav .header-searchbar ::placeholder {
+  color: white;
+}
+header .header-mobile-nav .header-searchbar button {
+  height: 100%;
+  border: 0;
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: white;
+}
+header .header-mobile-nav .header-nav {
+  margin-top: 1rem;
+}
+header .header-mobile-nav .header-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+header .header-mobile-nav .header-nav ul a {
+  color: white;
+}
 header .header-bottom {
   display: flex;
   padding-block: 0px;
@@ -639,13 +690,16 @@ footer .footer-bottom a {
   .grid-left {
     display: flex !important;
   }
+  header .header-mobile-nav {
+    display: none !important;
+  }
 }
 @media (max-width: 768px) {
   header > div {
     padding-inline: 3rem;
   }
-  header .header-searchbar,
-header .header-nav {
+  header .header-middle .header-searchbar,
+header .header-bottom .header-nav {
     display: none !important;
   }
   header .header-hamburger {
