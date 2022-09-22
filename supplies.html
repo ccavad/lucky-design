@@ -81,13 +81,13 @@
 
         <div class="header-nav">
           <ul>
-            <li><a href="#">Haqqımızda</a></li>
-            <li><a href="#">Yeni</a></li>
-            <li><a href="#">Endirimlər</a></li>
-            <li><a href="#">Ən çox satılanlar</a></li>
-            <li><a href="#">Şərtlər</a></li>
+            <li><a href="./about.html">Haqqımızda</a></li>
+            <li><a href="./newproducts.html">Yeni</a></li>
+            <li><a href="./discounts.html">Endirimlər</a></li>
+            <li><a href="./bestsellers.html">Ən çox satılanlar</a></li>
+            <li><a href="./terms.html">Şərtlər</a></li>
             <li>
-              <a href="#"
+              <a href="./contact.html"
                 >Əlaqə
                 <img src="assets/images/icon/arrow-right.svg" alt="" />
               </a>
@@ -104,7 +104,7 @@
         <div class="header-nav">
           <ul>
             <li><a href="./about.html">Haqqımızda</a></li>
-            <li><a href="#">Yeni</a></li>
+            <li><a href="./newproducts.html">Yeni</a></li>
             <li><a href="#">Endirimlər</a></li>
             <li><a href="#">Ən çox satılanlar</a></li>
             <li><a href="#">Şərtlər</a></li>
@@ -495,7 +495,7 @@
               </a></li>
               <li><a href="#">20</a></li>
               <li><a href="#">21</a></li>
-              <li class="disabled"><a href="#">
+              <li><a href="#">
                 <i class="fa-solid fa-chevron-right"></i>
               </a></li>
             </ul>
@@ -583,6 +583,18 @@
       })();
     </script>
     <!-- /GetButton.io widget -->
+    <script>
+      const mobileFilterBtn = document.querySelector(".mobile-filter-btn");
+      const suppliesGridLeft = document.querySelector(".supplies-main-grid .grid-left");
+
+      mobileFilterBtn.addEventListener("click", () => {
+        if (suppliesGridLeft.style.display === "none") {
+          suppliesGridLeft.style.display = "flex"
+        } else {
+          suppliesGridLeft.style.display = "none"
+        }
+      })
+    </script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

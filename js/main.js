@@ -2,8 +2,6 @@
 
 const scrollTopBtn = document.querySelector(".scrollTopBtn");
 const products = document.querySelectorAll(".product");
-const mobileFilterBtn = document.querySelector(".mobile-filter-btn");
-const suppliesGridLeft = document.querySelector(".supplies-main-grid .grid-left");
 const headerHamburger = document.querySelector(".header-hamburger button");
 const mobileNav = document.querySelector(".header-mobile-nav");
 
@@ -12,14 +10,6 @@ const mobileNav = document.querySelector(".header-mobile-nav");
 let cartData = [];
 
 // events 
-
-mobileFilterBtn.addEventListener("click", () => {
-  if (suppliesGridLeft.style.display === "none") {
-    suppliesGridLeft.style.display = "flex"
-  } else {
-    suppliesGridLeft.style.display = "none"
-  }
-})
 
 headerHamburger.addEventListener("click", () => {
   let icon = headerHamburger.querySelector("i");

@@ -785,6 +785,18 @@ header .header-bottom .header-nav {
   .about-info .about-info-logo img {
     scale: 1.5;
   }
+  .new-page-body .new-main .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+  }
+  .contact-body .contact-main .contact-boxes {
+    flex-direction: column;
+  }
+  .contact-body .contact-main .contact-form {
+    flex-direction: column;
+  }
+  .contact-body .contact-main .contact-form > * {
+    flex: auto !important;
+  }
 }
 @media (max-width: 1200px) {
   header .header-bottom {
@@ -793,6 +805,9 @@ header .header-bottom .header-nav {
   }
   header .header-bottom .header-nav li {
     font-size: 1rem !important;
+  }
+  .new-main .product-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 @media (max-width: 968px) {
@@ -1163,6 +1178,114 @@ input[type=range]::-moz-range-thumb {
 .about-page-body .about-main .about-section .about-info .about-info-logo {
   display: grid;
   place-items: center;
+}
+
+.new-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 6rem;
+  background-color: #f8f8f8;
+}
+.new-main .section-title::after {
+  background-color: var(--green);
+}
+.new-main .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.new-main .product-grid .product .product-badge {
+  background-color: var(--orange);
+}
+
+.contact-body .contact-main {
+  padding: 3rem 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+.contact-body .contact-main > img {
+  position: absolute;
+}
+.contact-body .contact-main .section-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.contact-body .contact-main .section-title::after {
+  background-color: var(--green);
+  top: 2.5rem;
+}
+.contact-body .contact-main .breadcrumb {
+  margin-top: 2.5rem;
+}
+.contact-body .contact-main .contact-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+.contact-body .contact-main .contact-boxes .contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  padding: 1.5rem;
+  text-align: center;
+}
+.contact-body .contact-main .contact-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+.contact-body .contact-main .contact-form > * {
+  flex: 1;
+}
+.contact-body .contact-main .contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-body .contact-main .contact-form form h3 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.contact-body .contact-main .contact-form form .form-btn {
+  width: 100%;
+  background-color: var(--green);
+  color: white;
+  padding: 1rem 0;
+  border-radius: 5px;
+  border: 0;
+  transition: 0.2s;
+}
+.contact-body .contact-main .contact-form form .form-btn:hover {
+  background-color: var(--orange);
+}
+.contact-body .contact-main .contact-form form input, .contact-body .contact-main .contact-form form textarea {
+  width: 100%;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 1rem;
+  resize: none;
+  font-size: 1.1rem;
+}
+.contact-body .contact-main .contact-form form input:active, .contact-body .contact-main .contact-form form input:focus, .contact-body .contact-main .contact-form form textarea:active, .contact-body .contact-main .contact-form form textarea:focus {
+  border: 1px solid var(--orange);
+}
+.contact-body .contact-main .contact-form form textarea {
+  height: 120px;
+}
+.contact-body .contact-main .contact-form form textarea:active, .contact-body .contact-main .contact-form form textarea:focus {
+  border: 1px solid var(--orange);
 }
 
 .swiper {

@@ -30,9 +30,9 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Lucky Office Support - Haqqımızda</title>
+    <title>Lucky Office Support - Əlaqə</title>
   </head>
-  <body class="about-page-body">
+  <body class="contact-body">
     <header>
       <div class="pattern-image">
         <img
@@ -103,7 +103,7 @@
         </div>
         <div class="header-nav">
           <ul>
-            <li><a href="#">Haqqımızda</a></li>
+            <li><a href="./about.html">Haqqımızda</a></li>
             <li><a href="#">Yeni</a></li>
             <li><a href="#">Endirimlər</a></li>
             <li><a href="#">Ən çox satılanlar</a></li>
@@ -117,49 +117,44 @@
           </ul>
         </div>
       </div>
-      
     </header>
 
-    <main class="about-main">
-      <section class="about-section">
-        <h2 class="section-title">
-          Haqqımızda
-        </h2>
-        <p class="breadcrumb">
-          <a href="./index.html">Ana Səhifə</a>
-          / Haqqımızda
-        </p>
+    <main class="contact-main">
+      <h2 class="section-title">
+        Əlaqə
+      </h2>
+      <p class="breadcrumb">
+        <a href="./index.html">Ana Səhifə</a>
+        / Əlaqə
+      </p>
+      <img src="./assets/images/pattern/leaf-title.png" alt="leaf">
 
-        <img src="./assets/images/pattern/leaf-title.png" alt="leaf">
-
-        <div class="about-info">
-          <div class="about-info-text">
-            <h3>Haqqımızda</h3>
-            <p>Şirkətimiz, ofisinizin gündəlik təchizatı üçün zəruri olan <b>dəftərxana 
-              ləvazimatlarının, su, çay, kofe kimi daimi istifadə edilən qida
-              məhsullarının, gigiyena və təmizlik vasitələrinin, daşınan və
-              daşınmaz hər növ inventarın (ofis mebel dəstləri, kompyuter və
-              onun yan avadanlıqları)</b> Sizə sürətli və maneəsiz çatdırılması
-              xidmətini həyata keçirir.
-            </p>
-            <p>Xidmətlərimizdən istifadə etməklə Siz:</p>
-            <ul>
-              <li>vaxtınıza qənaət etmiş olursunuz,</li>
-              <li>sifariş etmədən öncə qiymətlərlə tanış ola, qiymət müqaisəsini rahatlıqla edə bilirsiniz,</li>
-              <li>sifarişlərinizi həm nəğd, həm də köçürmə yolu ilə həyata keçirə bilirsiniz,</li>
-              <li>əməkdaşlarınızın ancaq işlərinə vaxt sərf etməsinə zəmin yaradırsınız,</li>
-              <li>əlavə xərclərdən (taksi, park yeri, park cərimələri və s.) azad olursunuz.</li>
-            </ul>
-            <p>Bizimlə əməkdaşlıq etdiyiniz təqdirdə, bütün xidmətlərin yüksək sürət
-              və həssasiyyətlə həyata keçiriləcəyinə təminat veririk.</p>
-          </div>
-
-          <div class="about-info-logo">
-            <img src="./assets/images/logo/logo-footer.svg" alt="logo">
-          </div>
+      <div class="contact-boxes">
+        <div class="contact-box">
+          <img src="./assets/images/icon/contact-tel.svg">
+          <p>(994) 99 832 07 77</p>
         </div>
+        <div class="contact-box">
+          <img src="./assets/images/icon/contact-email.svg">
+          <p>info@los.az</p>
+        </div>
+        <div class="contact-box">
+          <img src="./assets/images/icon/contact-location.svg">
+          <p>Ziya Bünyadov pr, 1965. Çinar Park Biznes Mərkəzi</p>
+        </div>
+      </div>
 
-      </section>
+      <div class="contact-form">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3614.384487743571!2d49.865190927953904!3d40.37953427282485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1663863757654!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form>
+          <h3>Müraciət Formu</h3>
+          <input type="text" placeholder="Ad, soyad *">
+          <input type="text" placeholder="Başlıq *">
+          <input type="email" placeholder="E-mail *">
+          <textarea placeholder="Mesajınız *" width="100%"></textarea>
+          <button type="submit" class="form-btn">Göndər</button>
+        </form>
+      </div>
     </main>
 
     <button class="scrollTopBtn">
@@ -192,7 +187,7 @@
           </ul>
           <ul class="footer-nav">
             <li class="footer-menu-title">Menyular</li>
-            <li><a href="./about.html">Haqqımızda</a></li>
+            <li><a href="#">Haqqımızda</a></li>
             <li><a href="#">Çatdırılma</a></li>
             <li><a href="#">Geri qaytarılma və dəyişdirmə</a></li>
             <li><a href="#">Əlaqə</a></li>
@@ -241,6 +236,6 @@
       })();
     </script>
     <!-- /GetButton.io widget -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
