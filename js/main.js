@@ -8,6 +8,7 @@ const mobileNav = document.querySelector(".header-mobile-nav");
 // variables 
 
 let cartData = [];
+let wishlistData = [];
 
 // events 
 
@@ -29,6 +30,11 @@ products.forEach(product => {
   product.addEventListener("click", e => {
     if (e.target.classList.contains("addToCartBtn")) {
       const prd = e.target.parentNode;
+      cartData.push({
+        title: prd.querySelector(".product-title").innerHTML,
+        price: prd.querySelector(".product-price").innerText,
+      })
+      console.log(cartData)
     } else if (e.target.parentNode.classList.contains("product-wished")) {
       e.target.src = "assets/images/icon/heart-filled.svg";
     }
