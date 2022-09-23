@@ -4,11 +4,13 @@ const scrollTopBtn = document.querySelector(".scrollTopBtn");
 const products = document.querySelectorAll(".product");
 const headerHamburger = document.querySelector(".header-hamburger button");
 const mobileNav = document.querySelector(".header-mobile-nav");
+const cartBtnCount = document.querySelector("#cartBtnCount");
 
 // variables 
 
 let cartData = [];
 let wishlistData = [];
+let cartCount = 0;
 
 // events 
 
@@ -26,16 +28,21 @@ headerHamburger.addEventListener("click", () => {
 
 // cart functionality 
 
+cartBtnCount.innerHTML = cartCount.toString();
+
 products.forEach(product => {
   product.addEventListener("click", e => {
     if (e.target.classList.contains("addToCartBtn")) {
       const prd = e.target.parentNode;
+      cartCount++;
+      cartBtnCount.innerHTML = cartCount.toString();
       cartData.push({
         title: prd.querySelector(".product-title").innerHTML,
         price: prd.querySelector(".product-price").innerText,
       })
       console.log(cartData)
     } else if (e.target.parentNode.classList.contains("product-wished")) {
+      wishlistData.push(e.target.closest(".product"))
       e.target.src = "assets/images/icon/heart-filled.svg";
     }
   })
