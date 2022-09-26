@@ -9,8 +9,11 @@ const cartBtnCount = document.querySelector("#cartBtnCount");
 // variables 
 
 let cartData = [];
-let wishlistData = [];
-let cartCount = 0;
+if (localStorage.getItem("cartData") !== null) {
+  cartData = JSON.parse(localStorage.getItem("cartData"))
+}
+
+let cartCount = cartData.length;
 
 // events 
 
@@ -32,16 +35,20 @@ cartBtnCount.innerHTML = cartCount.toString();
 
 products.forEach(product => {
   product.addEventListener("click", e => {
+    // add to cart 
     if (e.target.classList.contains("addToCartBtn")) {
       const prd = e.target.parentNode;
-      cartCount++;
-      cartBtnCount.innerHTML = cartCount.toString();
       cartData.push({
         title: prd.querySelector(".product-title").innerHTML,
-        price: prd.querySelector(".product-price").innerText,
+        price: parseFloat(prd.querySelector(".product-price").innerText),
+        src: prd.querySelector("img").src.slice(34)
       })
-      console.log(cartData)
-    } else if (e.target.parentNode.classList.contains("product-wished")) {
+      cartCount = cartData.length;
+      cartBtnCount.innerHTML = cartCount.toString();
+      localStorage.setItem("cartData", JSON.stringify(cartData))
+    } 
+    // add to wishlist 
+    else if (e.target.parentNode.classList.contains("product-wished")) {
       wishlistData.push(e.target.closest(".product"))
       e.target.src = "assets/images/icon/heart-filled.svg";
     }

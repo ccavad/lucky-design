@@ -34,6 +34,7 @@ body {
 .pattern-image img {
   position: absolute;
   pointer-events: none;
+  max-width: 100%;
 }
 
 .section-title {
@@ -69,6 +70,7 @@ input:focus,
 input:active {
   outline: 0;
 }
+
 
 // header
 
@@ -543,7 +545,8 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: #f8f8f8;
-  padding: 3rem 6rem 8rem;
+  padding: $section-padding;
+  padding-bottom: 8rem;
 
   .pattern-image {
     img:nth-of-type(1) {
@@ -797,6 +800,12 @@ footer {
 
 // media queries
 
+@media (max-width: 360px) {
+  html {
+    font-size: 80%
+  }
+}
+
 @media (min-width: 769px) {
   .grid-left {
     display: flex !important;
@@ -807,11 +816,31 @@ footer {
 }
 
 @media (max-width: 768px) {
-  $section-padding: 3rem !important;
+  $section-padding: 3rem 1rem !important;
+
+  html {
+    font-size: 95%
+  }
+
+  .section-title {
+    font-size: 1.5rem
+  }
 
   header {
     > div {
-      padding-inline: 3rem;
+      padding-inline: 1rem;
+    }
+    .header-top a {
+      background-color: transparent !important;
+      color: white !important;
+      border: 0;
+      outline: 0;
+
+      &:hover {
+        border: 0 !important;
+        color: white !important;
+        background-color: transparent !important
+      }
     }
     .header-middle .header-searchbar,
     .header-bottom .header-nav {
@@ -852,6 +881,8 @@ footer {
 
   .office-supplies,
   .foodAndDrinks {
+    padding: 3rem 1rem;
+
     .grid {
       grid-template-columns: 1fr;
     }
@@ -859,7 +890,15 @@ footer {
 
   .category1 {
     .grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr !important;
+
+      .grid-item {
+        grid-column: span 1 !important;
+      }
+
+      a {
+        font-size: .8rem
+      }
     }
   }
   .category2 {
@@ -868,21 +907,9 @@ footer {
       grid-template-rows: 1fr !important;
       transform: translateY(0) !important;
 
-      .grid-item:nth-of-type(1) {
-        grid-column: 1/2;
-        grid-row: 1/2;
-      }
-      .grid-item:nth-of-type(2) {
-        grid-column: 1/2;
-        grid-row: 2/3;
-      }
-      .grid-item:nth-of-type(3) {
-        grid-column: 1/2;
-        grid-row: 3/4;
-      }
-      .grid-item:nth-of-type(4) {
-        grid-column: 1/2;
-        grid-row: 4/5;
+      .grid-item {
+        grid-column: 1/2 !important;
+        grid-row: span 1 !important;
       }
     }
   }
@@ -890,7 +917,7 @@ footer {
   // supplies page <768px
   .supplies-page-body {
     .supplies-main {
-      padding: 3rem !important;
+      padding: 3rem 1rem !important;
 
       .mobile-filter-btn {
         display: block !important;
@@ -907,7 +934,7 @@ footer {
             flex-direction: column;
           }
           .grid-products {
-            grid-template-columns: 1fr !important;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 200px)) !important;
 
             .grid-pagination {
               grid-column: auto;
@@ -984,6 +1011,8 @@ footer {
 @media (max-width: 968px) {
   .office-supplies,
   .foodAndDrinks {
+    padding: 3rem 4rem;
+
     .grid {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
@@ -1056,7 +1085,7 @@ footer {
   }
 
   footer {
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
 
     .footer-top {
       grid-template-columns: 1fr;
@@ -1067,6 +1096,7 @@ footer {
         .footer-nav {
           align-items: center;
           margin: 1rem;
+          text-align: center;
         }
       }
     }
@@ -1101,6 +1131,7 @@ footer {
   .supplies-main-grid {
     display: flex;
     gap: 2rem;
+    width: 100%;
 
     .grid-left {
       flex: 1;
@@ -1200,6 +1231,7 @@ footer {
           justify-content: center;
           gap: 0.5rem;
           margin-top: 2rem;
+          align-self: center;
 
           li {
             transition: 0.8s;
